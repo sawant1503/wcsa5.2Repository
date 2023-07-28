@@ -1,4 +1,4 @@
-package keyWordDrivenFramework;
+package pom;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -60,3 +60,4 @@ public class Flib {
 		return data;
 	}
 }
+

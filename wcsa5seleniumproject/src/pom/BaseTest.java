@@ -1,4 +1,4 @@
-package keyWordDrivenFramework;
+package pom;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -8,10 +8,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import keyWordDrivenFramework.IautoConstatnt;
+
 public class BaseTest extends Flib implements IautoConstatnt{
 
 	static WebDriver driver;
-	public void openBrowser() throws IOException
+	public void setUp() throws IOException
 	{
 		Flib flib = new Flib();
 		String browserValue = flib.readPropertyData(PROP_PATH,"Browser");
@@ -43,7 +45,7 @@ public class BaseTest extends Flib implements IautoConstatnt{
 		driver.get(url);
 	}
 
-	public void closeBrowser()
+	public void tearDown()
 	{
 		driver.quit();
 	}
